@@ -1,0 +1,65 @@
+'fileTypes': [
+    'hlsl'
+]
+'name': 'HLSL'
+'scopeName': 'source.hlsl'
+'patterns': [
+    {
+        'match': '\\.(x|y|z|w|r|g|b|a){1,4}'
+        'name': 'keyword.operator.other.special-method.swizzle.hlsl'
+    }
+    {
+        'match': '\\b(break|case|continue|default|discard|do|else|for|if|return|switch|while)\\b'
+        'name': 'keyword.control.hlsl'
+    }
+    {
+        'match':     '\\b(TextureCube|Texture[1|2|3]D|Texture[1D|2D|2DMS|Cube]Array|Texture2DMS|RWBuffer|StructuredBuffer|AppendStructuredBuffer|ByteAddressBuffer|Buffer|ConsumeStructuredBuffer|SamplerState|TriangleStream)\\b'
+        'name' : 'storage.type.object.hlsl'
+    }
+    {
+        'match' : '\\b(bool|int[1|2|3|4]x[1|2|3|4]|int[1|2|3|4]|int|uint[1|2|3|4]x[1|2|3|4]|uint[1|2|3|4]|uint|float[1|2|3|4]x[1|2|3|4]|float[1|2|3|4]|float|min10float[1|2|3|4]x[1|2|3|4]|min10float[1|2|3|4]|min10float|min16float[1|2|3|4]x[1|2|3|4]|min16float[1|2|3|4]|min16float|min12int[1|2|3|4]x[1|2|3|4]|min12int[1|2|3|4]|min12int|min16int[1|2|3|4]x[1|2|3|4]|min16int[1|2|3|4]|min16int|min16uint[1|2|3|4]x[1|2|3|4]|min16uint[1|2|3|4]|min16uint|matrix)'
+        'name' : 'storage.type.primitive.hlsl'
+    }
+    {
+        'match': '\\b(cbuffer|groupshared|centroid|column_major|row_major|nointerpolation|noperspective|static|const)\\b'
+        'name': 'storage.modifier.hlsl'
+    }
+    {
+        'match': '\\b(?i:SV_VertexID|SV_DispatchThreadID|SV_GroupID|SV_GroupIndex|SV_GroupThreadID|SV_Position|SV_Target|SV_InnerCoverage|SV_StencilRef)\\b'
+        'name': 'support.class.builtin.hlsl'
+    }
+    {
+        'match': '\\b(abort|abs|acos|all|AllMemoryBarrier|AllMemoryBarrierWithGroupSync|any|asdouble|asfloat|asin|asint|asint|asuint|asuint|atan|atan2|ceil|CheckAccessFullyMapped|clamp|clip|cos|cosh|countbits|cross|D3DCOLORtoUBYTE4|ddx|ddx_coarse|ddx_fine|ddy|ddy_coarse|ddy_fine|degrees|determinant|DeviceMemoryBarrier|DeviceMemoryBarrierWithGroupSync|distance|dot|dst|errorf|EvaluateAttributeAtCentroid|EvaluateAttributeAtSample|EvaluateAttributeSnapped|exp|exp2|f16tof32|f32tof16|faceforward|firstbithigh|firstbitlow|floor|fma|fmod|frac|frexp|fwidth|GetRenderTargetSampleCount|GetRenderTargetSamplePosition|GroupMemoryBarrier|GroupMemoryBarrierWithGroupSync|InterlockedAdd|InterlockedAnd|InterlockedCompareExchange|InterlockedCompareStore|InterlockedExchange|InterlockedMax|InterlockedMin|InterlockedOr|InterlockedXor|isfinite|isinf|isnan|ldexp|length|lerp|lit|log|log10|log2|mad|max|min|modf|msad4|mul|noise|normalize|pow|printf|Process2DQuadTessFactorsAvg|Process2DQuadTessFactorsMax|Process2DQuadTessFactorsMin|ProcessIsolineTessFactors|ProcessQuadTessFactorsAvg|ProcessQuadTessFactorsMax|ProcessQuadTessFactorsMin|ProcessTriTessFactorsAvg|ProcessTriTessFactorsMax|ProcessTriTessFactorsMin|radians|rcp|reflect|refract|reversebits|round|rsqrt|saturate|sign|sin|sincos|sinh|smoothstep|sqrt|step|tan|tanh|tex1D|tex1D|tex1Dbias|tex1Dgrad|tex1Dlod|tex1Dproj|tex2D|tex2D|tex2Dbias|tex2Dgrad|tex2Dlod|tex2Dproj|tex3D|tex3D|tex3Dbias|tex3Dgrad|tex3Dlod|tex3Dproj|texCUBE|texCUBE|texCUBEbias|texCUBEgrad|texCUBElod|texCUBEproj|transpose|trunc)\\b'
+        'name': 'support.function.builtin.hlsl'
+    }
+    {
+        'match': '\\b(auto|case|catch|char|class|const_cast|default|delete|dynamic_cast|enum|explicit|friend|goto|long|mutable|new|operator|private|protected|public|reinterpret_cast|short|signed|sizeof|static_cast|template|this|throw|try|typename|union|unsigned|using|virtual)\\b'
+        'name': 'invalid.illegal.hlsl'
+    }
+    {
+        'match':
+            'register\\s+(\\([^\\)]+\\))'
+        'captures' :
+            '0':
+                'name' : 'storage.type.register.hlsl'
+    }
+    {
+        'match' :
+            '\\[(domain|partitioning|outputtopology|patchconstantfunc|outputcontrolpoints|instance|maxtessfactor|numthreads)\\(([^\\)]+)\\)\\]'
+        'captures' :
+            '0' :
+                'name' : 'entity.other.attribute-name.hlsl'
+            '1' :
+                'name' : 'variable.hlsl'
+    }
+    {
+        'match' :
+            '\\[(earlydepthstencil)\\]'
+        'captures' :
+            '0' :
+                'name' : 'entity.other.attribute-name.hlsl'
+    }
+    {
+        'include': 'source.c'
+    }
+]

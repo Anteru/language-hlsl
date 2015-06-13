@@ -1,0 +1,19 @@
+{
+  "name": "language-hlsl",
+  "version": "1.0.0",
+  "description": "Atom language support for HLSL",
+  "repository": "https://github.com/atom/language-hlsl",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "language",
+    "hlsl",
+    "atom",
+    "editor",
+    "syntax"
+  ]
+}
