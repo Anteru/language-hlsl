@@ -17,7 +17,7 @@
         'name' : 'storage.type.object.hlsl'
     }
     {
-        'match' : '\\b(bool|int[1|2|3|4]x[1|2|3|4]|int[1|2|3|4]|int|uint[1|2|3|4]x[1|2|3|4]|uint[1|2|3|4]|uint|float[1|2|3|4]x[1|2|3|4]|float[1|2|3|4]|float|min10float[1|2|3|4]x[1|2|3|4]|min10float[1|2|3|4]|min10float|min16float[1|2|3|4]x[1|2|3|4]|min16float[1|2|3|4]|min16float|min12int[1|2|3|4]x[1|2|3|4]|min12int[1|2|3|4]|min12int|min16int[1|2|3|4]x[1|2|3|4]|min16int[1|2|3|4]|min16int|min16uint[1|2|3|4]x[1|2|3|4]|min16uint[1|2|3|4]|min16uint|matrix)'
+        'match' : '\\b(bool|int[1|2|3|4]x[1|2|3|4]|int[1|2|3|4]|int|uint[1|2|3|4]x[1|2|3|4]|uint[1|2|3|4]|uint|float[1|2|3|4]x[1|2|3|4]|float[1|2|3|4]|float|min10float[1|2|3|4]x[1|2|3|4]|min10float[1|2|3|4]|min10float|min16float[1|2|3|4]x[1|2|3|4]|min16float[1|2|3|4]|min16float|min12int[1|2|3|4]x[1|2|3|4]|min12int[1|2|3|4]|min12int|min16int[1|2|3|4]x[1|2|3|4]|min16int[1|2|3|4]|min16int|min16uint[1|2|3|4]x[1|2|3|4]|min16uint[1|2|3|4]|min16uint|matrix)\\b'
         'name' : 'storage.type.primitive.hlsl'
     }
     {
