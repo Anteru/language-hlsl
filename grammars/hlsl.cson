@@ -1,5 +1,6 @@
 'fileTypes': [
-    'hlsl'
+    'hlsl',
+    'fx'
 ]
 'name': 'HLSL'
 'scopeName': 'source.hlsl'
